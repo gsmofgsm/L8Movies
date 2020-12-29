@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <livewire:styles />
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
@@ -46,5 +47,6 @@
         </div>
     </nav>
     @yield('content')
+    <livewire:scripts />
 </body>
 </html>
