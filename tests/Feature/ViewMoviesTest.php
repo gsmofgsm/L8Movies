@@ -25,7 +25,7 @@ class ViewMoviesTest extends TestCase
         $response->assertSee('Wonder Woman 1984');
         $response->assertSee('Now Playing');
         $response->assertSee('Honest Thief');
-        $response->assertSee('Fantasy');
+        $response->assertSee('Fantasy, Action, Adventure');
     }
 
     /** @test */
