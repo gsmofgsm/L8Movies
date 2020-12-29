@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Http;
+use Livewire\Livewire;
 use Tests\TestCase;
 
 class ViewMoviesTest extends TestCase
@@ -40,6 +41,19 @@ class ViewMoviesTest extends TestCase
         $response->assertSee('Nicolas Cage');
         $response->assertSee('Mark Mothersbaugh');
         $response->assertSee('Original Music Composer');
+    }
+
+    /** @test */
+    public function the_search_dropdown_works_correctly()
+    {
+        Http::fake([
+            'https://api.themoviedb.org/3/search/movie?query=jumanji' => Http::response($this->fakeSearchMovies()), 200,
+        ]);
+
+        Livewire::test('search-dropdown')
+            ->assertDontSee('jumanji')
+            ->set('search', 'jumanji')
+            ->assertSee('Jumanji: The Next Level');
     }
 
     private function fakePopularMovies()
@@ -1142,6 +1156,35 @@ class ViewMoviesTest extends TestCase
                     ],
                 ],
             ],
+        ];
+    }
+
+    private function fakeSearchMovies()
+    {
+        return [
+            "page" => 1,
+            "results" => [
+                0 => [
+                    "adult" => false,
+                    "backdrop_path" => "/zTxHf9iIOCqRbxvl8W5QYKrsMLq.jpg",
+                    "genre_ids" => [
+                        0 => 12,
+                        1 => 35,
+                        2 => 14,
+                    ],
+                    "id" => 512200,
+                    "original_language" => "en",
+                    "original_title" => "Jumanji: The Next Level",
+                    "overview" => "As the gang return to Jumanji to rescue one of their own, they discover that nothing is as they expect. The players will have to brave parts unknown and unexplored in order to escape the world’s most dangerous game.",
+                    "popularity" => 95.661,
+                    "poster_path" => "/jyw8VKYEiM1UDzPB7NsisUgBeJ8.jpg",
+                    "release_date" => "2019-12-04",
+                    "title" => "Jumanji: The Next Level",
+                    "video" => false,
+                    "vote_average" => 7,
+                    "vote_count" => 5171,
+                ],
+            ]
         ];
     }
 }
