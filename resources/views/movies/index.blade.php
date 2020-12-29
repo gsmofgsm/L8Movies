@@ -18,6 +18,6 @@
                     <x-movie-card :movie="$movie" />
                 @endforeach
             </div>
-        </div> <!-- end popular-movies -->
+        </div> <!-- end now-playing-movies -->
     </div>
 @endsection
