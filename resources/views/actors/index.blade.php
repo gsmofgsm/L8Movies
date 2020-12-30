@@ -19,17 +19,30 @@
                 @endforeach
             </div>
         </div> <!-- end popular-actors -->
-        <div class="flex justify-between mt-16">
-            <div>
-            @if ($previous)
-                <a href="/actors/page/{{ $previous }}">Previous</a>
-            @endif
-            </div>
-            <div>
-            @if ($next)
-                <a href="/actors/page/{{ $next }}">Next</a>
-            @endif
-            </div>
-        </div>
+{{--        <div class="flex justify-between mt-16">--}}
+{{--            <div>--}}
+{{--            @if ($previous)--}}
+{{--                <a href="/actors/page/{{ $previous }}">Previous</a>--}}
+{{--            @endif--}}
+{{--            </div>--}}
+{{--            <div>--}}
+{{--            @if ($next)--}}
+{{--                <a href="/actors/page/{{ $next }}">Next</a>--}}
+{{--            @endif--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
+@endsection
+
+@section('scripts')
+    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+    <script>
+        var elem = document.querySelector('.grid');
+        var infScroll = new InfiniteScroll( elem, {
+            // options
+            path: '/actors/page/@{{#}}',
+            append: '.actor',
+            // history: false,
+        });
+    </script>
 @endsection
