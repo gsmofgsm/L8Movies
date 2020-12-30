@@ -4,135 +4,81 @@
     <div class="movie-info border-b border-gray-800">
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
             <div class="flex-none">
-                <img src="{{ $movie['poster_path'] }}" alt="parasite" class="w-64 md:w-96">
+                <img src="/img/actor1.jpg" alt="parasite" class="w-64 md:w-96">
+                <ul class="flex items-center mt-4">
+                    <li>
+                        <a href="#" title="Facebook">
+                            <svg class="fill-current text-gray-400 hover:text-white w-8" viewBox="0 0 14 16" fill="none"><path d="M14 2.5v11a1.5 1.5 0 01-1.5 1.5H9.834V9.463h1.894L12 7.35H9.834V6c0-.612.17-1.028 1.047-1.028H12V3.084A15.044 15.044 0 0010.369 3C8.756 3 7.65 3.984 7.65 5.794v1.56h-1.9v2.112h1.903V15H1.5A1.5 1.5 0 010 13.5v-11A1.5 1.5 0 011.5 1h11A1.5 1.5 0 0114 2.5z" /></svg>
+                        </a>
+                    </li>
+                    <li class="ml-4">
+                        <a href="#" title="Instagram">
+                            <svg class="fill-current text-gray-400 hover:text-white w-8" viewBox="0 0 16 18" fill="none"><g clip-path="url(#clip0)"><path d="M8.004 4.957c-2.272 0-4.104 1.804-4.104 4.04 0 2.235 1.832 4.039 4.104 4.039 2.271 0 4.103-1.804 4.103-4.04 0-2.235-1.832-4.039-4.103-4.039zm0 6.666c-1.468 0-2.668-1.178-2.668-2.627 0-1.448 1.196-2.626 2.668-2.626 1.471 0 2.667 1.178 2.667 2.626 0 1.449-1.2 2.627-2.667 2.627zm5.228-6.831a.948.948 0 01-.957.942.948.948 0 01-.957-.942.95.95 0 01.957-.942.95.95 0 01.957.942zm2.718.956c-.06-1.262-.354-2.38-1.293-3.301-.936-.921-2.071-1.21-3.353-1.273C9.982 1.1 6.02 1.1 4.7 1.174c-1.279.06-2.414.348-3.354 1.27-.939.92-1.228 2.038-1.292 3.3-.075 1.301-.075 5.2 0 6.5.06 1.263.353 2.381 1.292 3.302.94.921 2.072 1.21 3.354 1.273 1.321.074 5.282.074 6.604 0 1.282-.06 2.417-.348 3.353-1.273.936-.921 1.229-2.039 1.293-3.301.075-1.3.075-5.196 0-6.497zm-1.707 7.893a2.68 2.68 0 01-1.522 1.497c-1.053.412-3.553.317-4.717.317-1.165 0-3.668.091-4.718-.317a2.68 2.68 0 01-1.522-1.497c-.418-1.037-.321-3.498-.321-4.645 0-1.146-.093-3.61.321-4.644a2.68 2.68 0 011.522-1.497c1.053-.412 3.553-.317 4.718-.317 1.164 0 3.667-.091 4.717.317.7.274 1.24.805 1.522 1.497.418 1.037.321 3.498.321 4.644 0 1.147.097 3.611-.321 4.645z" /></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h16v18H0z"/></clipPath></defs></svg>
+                        </a>
+                    </li>
+                    <li class="ml-4">
+                        <a href="#" title="Twitter">
+                            <svg class="fill-current text-gray-400 hover:text-white w-8" viewBox="0 0 18 18" fill="none"><path d="M6.382 15h-.06a8.152 8.152 0 01-3.487-.818 1.035 1.035 0 01-.585-1.08 1.057 1.057 0 01.87-.885 4.972 4.972 0 001.905-.667 7.117 7.117 0 01-2.633-6.803 1.058 1.058 0 01.75-.862 1.012 1.012 0 011.073.308 5.317 5.317 0 003.66 2.062A3.375 3.375 0 018.932 3.93a3.352 3.352 0 014.778.142.525.525 0 00.585.075 1.043 1.043 0 011.455 1.2 4.993 4.993 0 01-.96 1.95A8.093 8.093 0 016.382 15zm0-1.5h.06a6.592 6.592 0 006.818-6.442.99.99 0 01.277-.638c.183-.232.34-.483.465-.75a1.92 1.92 0 01-1.432-.638 1.836 1.836 0 00-1.32-.532 1.875 1.875 0 00-1.343.518 1.897 1.897 0 00-.54 1.814l.195.856-.877.06a6.225 6.225 0 01-4.905-1.8 5.34 5.34 0 002.797 4.845l.713.405-.473.675a4.216 4.216 0 01-2.01 1.44 6.25 6.25 0 001.568.187h.007z" /></svg>
+                        </a>
+                    </li>
+                    <li class="ml-4">
+                        <a href="#" title="Website">
+                            <svg class="fill-current text-gray-400 hover:text-white w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/></svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="md:ml-24">
-                <h2 class="text-4xl font-semibold">{{ $movie['title'] }}</h2>
+                <h2 class="text-4xl font-semibold">Will Smith</h2>
                 <div class="flex flex-wrap items-center text-gray-400 text-sm">
-                    <svg class="fill-current text-orange-500 w-4" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 20 20" fill="currentColor">
-                        <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                    <span class="ml-2">{{ $movie['vote_average'] }}</span>
-                    <span class="mx-2">|</span>
-                    <span>{{ $movie['release_date'] }}</span>
-                    <span class="mx-2">|</span>
-                    <span>{{ $movie['genres'] }}</span>
+                    <svg class="fill-current text-gray-400 hover:text-white w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+                    <span class="ml-2">Feb 20, 1983 (37 years old) in Toronto, Canada</span>
                 </div>
                 <p class="text-gray-300 mt-8">
-                    {{ $movie['overview'] }}
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
                 </p>
-                <div class="mt-12">
-                    <h4 class="text-white font-semibold">Featured Crew</h4>
-                    <div class="flex mt-4">
-                        @foreach($movie['crew'] as $crew)
-                            <div class="mr-8">
-                                <div>{{ $crew['name'] }}</div>
-                                <div class="text-sm text-gray-400">{{ $crew['job'] }}</div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div x-data="{ isOpen:false }">
-                @if(count($movie['videos']['results']))
-                    <div class="mt-12">
-                        <button
-                            @click="isOpen = true"
-                            class="inline-flex items-center bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4
-                            hover:bg-orange-600 transition ease-in-out duration-150">
-                            <svg class="w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
-                            <span class="ml-2">Play Trailer</span>
-                        </button>
-                    </div>
 
-                    <template x-if="isOpen">
-                        <div
-                            style="background-color: rgba(0, 0, 0, .5);"
-                            class="fixed top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto"
-                        >
-                            <div class="container mx-auto lg:px-32 rounded-lg overflow-y-auto">
-                                <div class="bg-gray-900 rounded">
-                                    <div class="flex justify-end pr-4 pt-2">
-                                        <button
-                                            @click="isOpen = false"
-                                            @keydown.escape.window="isOpen = false"
-                                            class="text-3xl leading-none hover:text-gray-300">&times;
-                                        </button>
-                                    </div>
-                                    <div class="modal-body px-8 py-8">
-                                        <div class="responsive-container overflow-hidden relative" style="padding-top: 56.25%">
-                                            <iframe class="responsive-iframe absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/{{ $movie['videos']['results'][0]['key'] }}" style="border:0;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </template>
+                <h4 class="font-semibold m5-12">Known For</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <div class="mt-4">
+                        <a href="#">
+                            <img src="/img/image1.jpg" alt="poster" class="hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#">
+                            <img src="/img/image2.jpg" alt="poster" class="hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#">
+                            <img src="/img/image3.jpg" alt="poster" class="hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#">
+                            <img src="/img/image4.jpg" alt="poster" class="hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#">
+                            <img src="/img/image5.jpg" alt="poster" class="hover:opacity-75 transition ease-in-out duration-150">
+                        </a>
+                    </div>
                 </div>
-                @endif
             </div>
         </div>
     </div> <!-- end movie-info -->
-    <div class="movie-cast border-b border-gray-800">
+    <div class="credits border-b border-gray-800">
         <div class="container mx-auto px-4 py-16">
-            <h2 class="text-4xl font-semibold">Cast</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-
-                @foreach($movie['cast'] as $cast)
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="{{ 'https://image.tmdb.org/t/p/w300' . $cast['profile_path'] }}" alt="actor"
-                                 class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray-300">{{ $cast['name'] }}</a>
-                            <div class="text-gray-400 text-sm">
-                                {{ $cast['character'] }}
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+            <h2 class="text-4xl font-semibold">Credits</h2>
+            <ul class="list-disc leading-loose pl-5 mt-8">
+                <li>2020 &middot; <strong>Black Widow</strong> as Tony Start / Iron Man</li>
+                <li>2020 &middot; <strong>Black Widow</strong> as Tony Start / Iron Man</li>
+                <li>2020 &middot; <strong>Black Widow</strong> as Tony Start / Iron Man</li>
+                <li>2020 &middot; <strong>Black Widow</strong> as Tony Start / Iron Man</li>
+                <li>2020 &middot; <strong>Black Widow</strong> as Tony Start / Iron Man</li>
+            </ul>
         </div>
-    </div> <!-- end movie-cast -->
-    <div class="movie-images" x-data="{ isOpen: false, image: '' }">
-        <div class="container mx-auto px-4 py-16">
-            <h2 class="text-4xl font-semibold">Images</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                @foreach($movie['images'] as $image)
-                    <div class="mt-8">
-                        <a
-                            @click.prevent="
-                                isOpen = true
-                                image = '{{ 'https://image.tmdb.org/t/p/original' . $image['file_path'] }}'
-                            "
-                            href="#"
-                        >
-                            <img src="{{ 'https://image.tmdb.org/t/p/w500' . $image['file_path'] }}" alt="image1" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-            <div
-                style="background-color: rgba(0, 0, 0, .5);"
-                class="fixed top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto"
-                x-show="isOpen"
-            >
-                <div class="container mx-auto lg:px-32 rounded-lg overflow-y-auto">
-                    <div class="bg-gray-900 rounded">
-                        <div class="flex justify-end pr-4 pt-2">
-                            <button
-                                @click="isOpen = false"
-                                @keydown.escape.window="isOpen = false"
-                                class="text-3xl leading-none hover:text-gray-300">&times;
-                            </button>
-                        </div>
-                        <div class="modal-body px-8 py-8">
-                            <img :src="image" alt="poster">
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
+    </div> <!-- end credits -->
 @endsection
